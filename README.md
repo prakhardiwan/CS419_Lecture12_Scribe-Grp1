@@ -5,4 +5,3 @@ Kernels
 Group Members:
 1) Prakhar Diwan 
 2) Prashul Vaishnav
-3) Durgesh Premchand Bhirud
