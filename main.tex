@@ -163,17 +163,43 @@ A kernel $K(X_1,X_2)$ is any function which can be represented as dot product of
     \item We can obtain $\phi$ for any function $F(x_{i}^Tx_{j})$ as long as its Taylor series converges for $n \to \infty$.
     \item If $K_{1}$ and $K_{2}$ are kernels, then for constants $\alpha_1$ and $\alpha_2$, then  $\alpha_{1}K_{1}+\alpha_{2}K_{2}$ is also a kernel. 
 \end{itemize}
+
 \subsection{Alternate Definition}
+A kernel $K(X_1,X_2)$ can equivalently be defined as any function such that : 
+\begin{itemize}
+    \item $K(X,X) \geq$ 0
+    \item For  every  $C_i$ and $C_j$, $\Sigma C_i C_j K(X_i,X_j) \geq$ 0
+\end{itemize}
+
+\begin{flushleft}
+\color{blue}
+Q. If $K_1(X-X')$ is the form of $K(X,X')$, can we decompose $K_1(X-X')$ as $\phi(X)^T\phi(X')$ ? \\
+Ans. Yes, we can decompose it in the form of $\phi(X)^T\phi(X')$ 
+
+Q. Given that $K(X,X')$ is a P.S.D. and satisfy $\Sigma C_i C_j K(X_i,X_j) \geq$ 0, then prove that $K(X,X')$ = $\phi(X)^T\phi(X')$.\\
+Ans. given $A[i,j] = K(X_i,X_j)$\\
+$\implies K(X,X') = K(X',X)$
+$\implies A = Q\^Q^T$
+\end{flushleft}
+
+\subsection{Illustration}
+Suppose $K_1(X,X')$ and $K_2(X,X')$ are kernels, if we define a function
+\begin{center}
+$K(X,X') = K_1(X,X').K_2(X,X')$\\
+$\implies K(X,X') = \phi_1(X)^T\phi_1(X').\phi_2(X)^T\phi_2(X')$\\
+$\implies K(X,X') = trace [\phi_2(X)\phi_1(X)^T.\phi_1(X')\phi_2(X')^T]$\\
+$\implies K(X,X') = trace [A(X).A(X')]$\\
+$\implies K(X,X') = \phi(X)^T.\phi(X')$\\
+\end{center}
+Note: Similar to the proof of the result that $(x_i^Tx_j)^2$ is a kernel.
+
+Therefore, the function $K(X,X')$ is also a kernel.
+
 \section{Group Details and Individual Contribution}
 \begin{itemize}
     \item Prakhar Diwan (180100083): Sections 12.1, 12.2.1, 12.2.2
-    \item ...
-    \item ...
+    \item Prashul Vaishnav (200020098): Sections 12.2.3, 12.2.4
 \end{itemize}
 % Fill this part
 \end{document}
-
-
-
-
 
